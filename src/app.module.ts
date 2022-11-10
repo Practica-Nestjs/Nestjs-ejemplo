@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
 
 import { EnvConfiguration, JoiValidationSchema } from './config';
+import { PokemonModule } from './pokemon/pokemon.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { EnvConfiguration, JoiValidationSchema } from './config';
       validationSchema: JoiValidationSchema,
     }),
     DatabaseModule,
+    PokemonModule,
   ],
   controllers: [],
   providers: [],
